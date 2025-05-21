@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arte y Moda</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <header>
+        <a href="javascript:void(0);" class="icono" onclick="MiFuncion()">
+            <i class="fa fa-bars"></i>
+          </a>
+        <nav class="navbar" id="navegador">
+            <ul class="menu">
+                <li><a href="moda-arte.html">Moda y Arte</a></li>
+                <li><a href="galeria.html">Galería</a></li>
+                <li><a href="sobre-nosotros.html">Sobre Nosotros</a></li>
+            </ul>
+        </nav>
+        <div class="banner">
+            <img src="Portada.jpeg" alt="Portada de arte y moda" class="banner-image">
+        </div>
+    </header>
+
+    <main>
+        <div class="content">
+            <h1>Breve presentación sobre de qué trata la página</h1>
+            <p>Debajo explicación histórica sobre el arte y la moda.</p>
+            <!--contenido de prueba para hacer scroll-->
+            <div class="galeria-cajas">
+                <div class="caja-noticia">
+                    <img src="WhatsApp Image 2025-04-20 at 20.02.02.jpeg" alt="Imagen 1">
+                    <p class="texto-noticia">La moda urbana toma inspiración del expresionismo alemán en esta colección que mezcla dramatismo y color.</p>
+                    <a href="moda-arte.html" class="leer-mas">Leer más</a>
+                </div>
+                <div class="caja-noticia">
+                    <img src="WhatsApp Image 2025-04-20 at 20.03.04 (1).jpeg" alt="Imagen 2">
+                    <p class="texto-noticia">Diseños que evocan el cubismo: geometría y estructura dominan la silueta femenina de este año.</p>
+                    <a href="moda-arte.html" class="leer-mas">Leer más</a>
+                  </a>
+                </div>
+                <div class="caja-noticia">
+                    <img src="WhatsApp Image 2025-04-20 at 20.03.04.jpeg" alt="Imagen 3">
+                    <p class="texto-noticia">La influencia surrealista revive con texturas oníricas y cortes inesperados en esta pasarela disruptiva.</p>
+                    <a href="moda-arte.html" class="leer-mas">Leer más</a>
+                </div>
+                <div class="caja-noticia">
+                    <img src="WhatsApp Image 2025-04-20 at 19.59.21.jpeg" alt="Imagen 4">
+                    <p class="texto-noticia">Del lienzo a la prenda: reinterpretaciones del arte renacentista en la moda contemporánea.</p>
+                    <a href="moda-arte.html" class="leer-mas">Leer más</a>
+                </div>
+            </div>
+
+            <div class="fila-video-imagen">
+                <div class="columna-video">
+                    <video loop muted autoplay playsinline>
+                    <source src="Video-pasarela.mp4" type="video/mp4">
+                  </video>
+                  <h2>Moda y Pasarela: Inspiración Artística</h2>
+                  <p class="texto-noticia">Desfile inspirado en el minimalismo de los años 90, donde la silueta cobra protagonismo sobre el ornamento.</p>
+                </div>
+                <div class="columna-imagen">
+                  <img src="Imagen pasaela 2.jpeg" alt="Imagen relacionada" />
+                  <h2>Moda y Pasarela: Inspiración Artística</h2>
+                  <p class="texto-noticia">Una fotografía editorial que fusiona moda contemporánea con la estética barroca.</p>
+                </div>
+              </div>
+            <div style="height: 100px;"></div>
+            <div class="galeria-tres">
+              <div class="caja-slider">
+                <img src="Diseñador 1 1.jpg" alt="Diseñador 1 - vista 1" class="img-slider visible">
+                <img src="Pasarela 1.jpeg" alt="Diseñador 1 - vista 2" class="img-slider">
+                <p class="nombre">Ariel Adkins</p>
+              </div>
+            
+              <div class="caja-slider">
+                <img src="Diseñador 2 2.jpg" alt="Diseñador 2 - vista 1" class="img-slider visible">
+                <img src="Pasarela 2.jpeg" alt="Diseñador 2 - vista 2" class="img-slider">
+                <p class="nombre">Gianni Versaches</p>
+              </div>
+            
+              <div class="caja-slider">
+                <img src="Diseñador 3 3.jpg" alt="Diseñador 3 - vista 1" class="img-slider visible">
+                <img src="Pasarela 3.jpeg" alt="Diseñador 3 - vista 2" class="img-slider">
+                <p class="nombre">Jorge Rey</p>
+              </div>
+            </div>
+            
+            
+    </main>
+
+
+    <div class="anuncios-bar" style="display: none;">
+      <a href="index.html" class="anuncio-link">
+      <div class="anuncio-contenido">
+        <img src="Logo en negativo.png" alt="Logo InspirArte" class="logo-anuncio">
+        <div class="mensaje-anuncio" id="mensajeRotativo">
+          Informate sobre los últimos cruces entre moda y arte
+        </div>
+        <div class="btn-anuncio">Ver más</div>
+      </div>
+    </a>
+  </div>
+
+  <iframe src="anuncio (1).html" class="iframe-anuncio"></iframe>
+
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const mensajes = [
+          "Informate sobre los últimos cruces entre moda y arte",
+          "Sumate a nuestra comunidad creativa",
+          "Descubri las inspiraciones de diseñadores en el arte"
+          
+        ];
+    
+        let index = 0;
+        const mensajeEl = document.getElementById("mensajeRotativo");
+        const anuncio = document.querySelector(".anuncios-bar");
+    
+        function cambiarMensaje() {
+          mensajeEl.style.opacity = 0;
+          setTimeout(() => {
+            index = (index + 1) % mensajes.length;
+            mensajeEl.textContent = mensajes[index];
+            mensajeEl.style.opacity = 1;
+          }, 1000);
+        }
+    
+        setInterval(cambiarMensaje, 5000);
+    
+        // Mostrar el anuncio una sola vez cuando aparece el footer
+        const observer = new IntersectionObserver((entries, obs) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              anuncio.style.display = "flex";
+              obs.disconnect(); // Detener la observación para que no vuelva a esconder el anuncio
+            }
+          });
+        }, {
+          root: null,
+          threshold: 0.3 // Ajustado para detectar cuando 30% del footer es visible
+        });
+    
+        const footer = document.getElementById("footer");
+        if (footer) {
+          observer.observe(footer);
+        }
+      });
+    </script>
+    
+  
+    <footer id="footer">
+      <footer class="footer">
+        <div class="footer-container">
+          <div class="footer-logo">
+            <img src="Logo en negativo.png" alt="logo-inspirarte">
+            <p>Moda y arte que expresan tu esencia</p>
+          </div>
+      
+          <div class="footer-links">
+            <h3>Explorá</h3>
+            <ul>
+              <li><a href="moda-arte.html">Moda y Arte</a></li>
+              <li><a href="galeria.html">Galería</a></li>
+              <li><a href="sobre-nosotros.html">Sobre Nosotros</a></li>
+            </ul>
+          </div>
+      
+          <div class="footer-contact">
+            <h3>Contacto</h3>
+            <p>hola@inspirarte.com</p>
+            <p>Buenos Aires, Argentina</p>
+          </div>
+      
+          <div class="footer-newsletter">
+            <h3>Newsletter</h3>
+            <p>¿Querés recibir inspiración cada semana?</p>
+            <form>
+              <input type="email" placeholder="Tu email" required>
+              <button type="submit">Suscribirme</button>
+            </form>
+          </div>
+        </div>
+      
+        <div class="footer-bottom">
+          <div class="footer-social">
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-pinterest"></i></a>
+            <a href="#"><i class="fab fa-tiktok"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+          </div>
+          <p>© 2025 InspirArte. Todos los derechos reservados.</p>
+          <p><em>“La moda es arte en movimiento.”</em></p>
+        </div>
+      
+   
+
+<button onclick="scrollToTop()" id="topBtn">Volver al inicio</button>
+<script>
+    function MiFuncion() {
+      var x = document.getElementById("navegador");
+      if (x.className === "") {
+        id = "navegador";
+        x.className += "mostrarmenu";
+      } else {
+        x.className = "";
+      }
+    }
+</script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const sliders = document.querySelectorAll(".caja-slider");
+
+    sliders.forEach(slider => {
+      slider.addEventListener("click", function () {
+        const images = slider.querySelectorAll(".img-slider");
+        images.forEach(img => img.classList.toggle("visible"));
+      });
+    });
+  });
+</script>
+
+</body>
+</html>
